@@ -169,16 +169,21 @@
                 android:textSize="18sp" />
 
             <!-- Texto para registro -->
+
             <TextView
                 android:id="@+id/login_register_prompt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="¿No tienes una cuenta? Regístrate aquí"
                 android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="¿No tienes una cuenta? Regístrate aquí"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:gravity="center" />
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                 android:background="?attr/selectableItemBackground" /> <!-- Esto da efecto de clic -->/>
 
             <TextView
                 android:id="@+id/login_forgot_password"

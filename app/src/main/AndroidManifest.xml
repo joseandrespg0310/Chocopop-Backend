@@ -13,23 +13,30 @@
         android:theme="@style/Theme.ChocoPop"
         tools:targetApi="31">
 
+        <!-- Actividad de inicio (Main) -->
         <activity
             android:name=".MainActivity"
             android:exported="true" />
 
+        <!-- Actividad que se lanza al iniciar la app -->
         <activity
             android:name=".MainXmlActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".DashboardActivity">
-            <!-- Agrega el contenido de la actividad DashboardActivity aquí -->
-        </activity>
+        <!-- Agregar la nueva actividad de registro -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true" />
+
+        <!-- Otra actividad, por ejemplo el Dashboard -->
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="true" />
 
     </application>
 
