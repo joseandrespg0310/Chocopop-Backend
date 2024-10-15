@@ -7,6 +7,10 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import okhttp3.ResponseBody
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -45,20 +49,35 @@ class RegisterActivity : AppCompatActivity() {
             // Validar campos vacíos
             if (nombre.isEmpty() || apellido.isEmpty() || usuario.isEmpty() || correo.isEmpty() || contraseña.isEmpty() || confirmarContraseña.isEmpty()) {
                 Toast.makeText(this, "Por favor, llena todos los campos", Toast.LENGTH_LONG).show()
-            }
-            // Validar coincidencia de contraseñas
-            else if (contraseña != confirmarContraseña) {
+            } else if (contraseña != confirmarContraseña) {
+                // Validar coincidencia de contraseñas
                 Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_LONG).show()
-            }
-            // Aquí iría la lógica de registro (puedes agregar una llamada a una API o base de datos)
-            else {
-                // Por ejemplo, código para registrar usuario en Firebase o base de datos local
-                Toast.makeText(this, "Usuario registrado con éxito", Toast.LENGTH_LONG).show()
+            } else {
+                // Crear un objeto de usuario
+                val user = User(nombre, apellido, usuario, correo, contraseña)
 
-                // Redirigir al inicio de sesión después del registro exitoso
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish() // Opcional: cierra la pantalla de registro
+                // Inicializar Retrofit utilizando RetrofitClient
+                val apiService = RetrofitClient.instance // Usamos RetrofitClient.instance aquí
+
+                // Llamar a la API
+                apiService.registerUser(user).enqueue(object : Callback<ResponseBody> { // Cambiado a ResponseBody
+                    override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) { // Cambiado a ResponseBody
+                        if (response.isSuccessful) {
+                            Toast.makeText(this@RegisterActivity, "Usuario registrado con éxito", Toast.LENGTH_LONG).show()
+
+                            // Redirigir al inicio de sesión después del registro exitoso
+                            val intent = Intent(this@RegisterActivity, MainActivity::class.java)
+                            startActivity(intent)
+                            finish() // Opcional: cierra la pantalla de registro
+                        } else {
+                            Toast.makeText(this@RegisterActivity, "Error en el registro", Toast.LENGTH_LONG).show()
+                        }
+                    }
+
+                    override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
+                        Toast.makeText(this@RegisterActivity, "Error: ${t.message}", Toast.LENGTH_LONG).show()
+                    }
+                })
             }
         }
 
