@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#ffdfae">
+
+    <!-- Encabezado con el logo y título -->
+    <LinearLayout
+        android:id="@+id/login_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fd9728"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="50dp"
+            android:src="@drawable/chocopop" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Choco "
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="27dp"
+            android:src="@drawable/paleta" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Pop"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="50dp"
+            android:src="@drawable/chocopop" />
+    </LinearLayout>
+
+    <!-- Título del carrito -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fd9728"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CARRITO DE COMPRAS"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Contenedor para los productos -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:id="@+id/productContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <!-- Subtotal, total y botón de comprar -->
+    <LinearLayout
+        android:background="@drawable/product_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/subtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sub Total: BS 0.00"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TOTAL: BS 0.00"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_comprar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RESERVAR"
+            android:textColor="#ffffff"
+            android:backgroundTint="#fd9728"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+</LinearLayout>

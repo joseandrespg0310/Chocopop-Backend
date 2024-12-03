@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="product"
+            type="com.example.chocopop.Product" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/product_background"
+        android:padding="10dp"
+        android:elevation="4dp">
+
+        <!-- Imagen del producto -->
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true" />
+
+
+        <!-- Nombre del producto -->
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{product.nombre}"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:paddingTop="8dp"
+            android:textStyle="italic"/>
+
+        <!-- Precio del producto -->
+        <TextView
+            android:id="@+id/productPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{`Precio: BS` + product.precio}"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:paddingTop="4dp"
+            android:textStyle="italic"/>
+
+        <!-- Botón para más información -->
+        <Button
+            android:id="@+id/moreInfoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#fd9728"
+            android:text="Más Información"
+            android:textColor="#ffffff" />
+
+
+    </LinearLayout>
+</layout>

@@ -2,8 +2,20 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.ChocoPop" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Definir color primario y fondo -->
+        <item name="colorPrimary">#000000</item> <!-- Café como color primario -->
+        <item name="colorPrimaryDark">#3E2723</item> <!-- Color oscuro para la barra de estado -->
+        <item name="colorAccent">#FF8A65</item> <!-- Otro color de acento, puedes cambiarlo -->
+
+        <!-- Barra de estado en color negro -->
+        <item name="android:statusBarColor">#ff9546</item>  <!-- Color de la barra de estado en café oscuro -->
+
+
+
+       <!-- Color negro para los íconos en los botones -->
     </style>
 
-    <style name="Theme.ChocoPop" parent="Base.Theme.ChocoPop" />
+    <style name="Theme.ChocoPop" parent="Base.Theme.ChocoPop">
+        <!-- Aquí puedes agregar más personalización si lo deseas -->
+    </style>
 </resources>

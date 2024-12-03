@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#ffdfae">
+
+    <!-- Encabezado -->
+
+    <!-- Contenido del producto -->
+
+    <!-- Barra de navegación inferior -->
+
+    <LinearLayout
+        android:id="@+id/login_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fd9728"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- Logos -->
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="50dp"
+            android:src="@drawable/chocopop" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Choco "
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="27dp"
+            android:src="@drawable/paleta" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Pop"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="50dp"
+            android:src="@drawable/chocopop" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="373dp"
+        android:layout_height="552dp"
+        android:layout_below="@id/login_header_layout"
+        android:layout_marginTop="-1dp"
+        android:background="#ffdfae"
+        android:padding="16dp">
+
+        <!-- Imagen del producto -->
+
+        <ImageView
+            android:id="@+id/detail_productImage"
+            android:layout_width="327dp"
+            android:layout_height="142dp"
+            android:layout_marginBottom="16dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
+
+        <!-- Nombre del producto -->
+        <TextView
+            android:id="@+id/detail_productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_productImage"
+            android:text="Nombre del Producto"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <!-- Precio del producto -->
+
+        <!-- Descripción del producto -->
+        <TextView
+            android:id="@+id/detail_productPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_productName"
+            android:layout_marginTop="3dp"
+            android:text="Precio: BS 0.00"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/detail_productDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_productPrice"
+            android:text="Descripción: "
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <!-- Ingredientes del producto -->
+
+
+        <!-- Botón para añadir al carrito -->
+        <Button
+            android:id="@+id/addToCartButton"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="436dp"
+            android:backgroundTint="#fd9728"
+            android:text="IR AL CARRITO"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/navigation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="#fd9728"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- Iconos de navegación -->
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="product"
+            type="com.example.chocopop.Product" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/product_background"
+                android:padding="10dp"
+                android:elevation="4dp">
+
+                <ImageView
+                    android:id="@+id/productImage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp">
+
+                    <TextView
+                        android:id="@+id/productName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre del producto"
+                        android:textStyle="italic"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/productPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="italic"
+                        android:text="Precio: Bs 10"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingTop="8dp">
+
+                        <Button
+                            android:id="@+id/decreaseButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:backgroundTint="#fd9728"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:id="@+id/productQuantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="1"
+                            android:padding="8dp"
+                            android:textColor="#000000" />
+
+                        <Button
+                            android:id="@+id/increaseButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+"
+                            android:backgroundTint="#fd9728"
+                            android:textColor="#ffffff" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</layout>
