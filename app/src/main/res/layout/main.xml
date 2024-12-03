@@ -72,36 +72,31 @@ android:layout_marginTop="8dp">
         android:src="@drawable/lupa"
          />
 
-    <EditText
+    <TextView
         android:id="@+id/search_input"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_weight="0.1"
         android:background="@drawable/search_background"
-        android:hint="Buscar"
+        android:hint="Visita Nuestra Pagina Oficial"
         android:padding="10dp"
         android:textColor="#FFFFFF"
         android:textColorHint="#fdf2e6" />
 
 
 
-    <ImageView
-    android:layout_width="40dp"
-    android:layout_height="40dp"
-    android:src="@drawable/carrito"
-    android:layout_marginStart="8dp" />
-
     <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@drawable/usuario"
-        android:layout_marginStart="8dp"
-        android:outlineSpotShadowColor="@color/black"
-        android:shadowColor="@color/black"
-        android:textColorHint="@color/black"
-        android:id="@+id/loginButton"
+        android:id="@+id/btn_carrito"
+        android:layout_width="47dp"
+        android:layout_height="45dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/carrito"
+        android:tint="@color/black"
+        android:backgroundTint="@android:color/black"
+        android:contentDescription="Ir al carrito"
+        android:layout_gravity="center" />
 
-        />
+
 </LinearLayout>
 
 
@@ -152,7 +147,7 @@ android:layout_marginTop="16dp">
         android:text="Dulces y chocolates nacionales e importados"
         android:textColor="#FFFFFF"
         android:background="#fdca7d"
-        android:padding="8dp" /> <!-- Espaciado alrededor del texto -->
+        android:padding="8dp" />
     </FrameLayout>
 
 </LinearLayout>
@@ -197,7 +192,10 @@ android:layout_marginTop="16dp">
     <View
         android:layout_width="match_parent"
         android:layout_height="181dp"
-        android:background="@drawable/oval_background" /> <!-- Fondo ovalado -->
+        android:background="@drawable/mr"
+        />
+    <!-- Fondo ovalado -->
+
 
 </LinearLayout>
 
@@ -221,7 +219,7 @@ android:layout_marginTop="16dp">
     <View
         android:layout_width="match_parent"
         android:layout_height="178dp"
-        android:background="@drawable/oval_background" />
+        android:background="@drawable/imagesw" />
 </LinearLayout>
 </LinearLayout>
 
@@ -242,36 +240,36 @@ android:layout_marginTop="16dp">
 
         <!-- Iconos de navegación -->
 
-        <ImageView
-            android:layout_width="47dp"
-            android:layout_height="45dp"
-            android:layout_margin="8dp"
-            android:src="@drawable/casa"
-            />
 
-        <ImageView
+        <Button
+            android:id="@+id/button_info"
             android:layout_width="47dp"
             android:layout_height="45dp"
             android:layout_margin="8dp"
-            android:src="@drawable/informacion"/>
+            android:tint="@color/black"
+            android:background="@drawable/informacion"
+            android:backgroundTint="@android:color/black" />
 
-        <ImageView
+        <Button
+            android:id="@+id/button_grid"
             android:layout_width="47dp"
             android:layout_height="45dp"
             android:layout_margin="8dp"
-            android:src="@drawable/cuadrados"/>
+            android:tint="@color/black"
+            android:background="@drawable/cuadrados"
+            android:backgroundTint="@android:color/black" />
 
-        <ImageView
-            android:layout_width="47dp"
-            android:layout_height="45dp"
-            android:layout_margin="8dp"
-            android:src="@drawable/ubicacion"/>
 
-        <ImageView
+
+        <Button
+            android:id="@+id/button_phone"
             android:layout_width="47dp"
             android:layout_height="45dp"
             android:layout_margin="8dp"
-            android:src="@drawable/telefono" />
+            android:background="@drawable/telefono"
+            android:tint="@color/black"
+            android:backgroundTint="@android:color/black" />
+
     </LinearLayout>
 
 </RelativeLayout>

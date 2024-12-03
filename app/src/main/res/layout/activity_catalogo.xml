@@ -1,0 +1,88 @@
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffdfae">
+
+    <!-- Encabezado -->
+    <LinearLayout
+        android:id="@+id/login_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fd9728"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- Logos -->
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="50dp"
+            android:src="@drawable/chocopop" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Choco "
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="27dp"
+            android:src="@drawable/paleta" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Pop"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="50dp"
+            android:src="@drawable/chocopop" />
+    </LinearLayout>
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:id="@+id/login_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@id/login_header_layout"
+        android:layout_marginTop="8dp">
+
+
+    </LinearLayout>
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/catalogRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/login_search_layout"
+        android:layout_above="@id/navigation_layout"
+        android:padding="8dp"
+        android:clipToPadding="false" />
+
+    <!-- Barra de navegación inferior -->
+    <LinearLayout
+        android:id="@+id/navigation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="#fd9728"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+
+
+    </LinearLayout>
+</RelativeLayout>

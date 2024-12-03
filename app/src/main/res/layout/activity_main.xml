@@ -1,199 +1,182 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ffdfae"
-    android:padding="16dp"
-    tools:context=".DashboardActivity">
-
-    <RelativeLayout
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:background="#ffdfae"
+        android:padding="16dp"
+        tools:context=".DashboardActivity">
 
-        <!-- Header Layout (Logos y nombre de la aplicación) -->
-        <LinearLayout
-            android:id="@+id/login_header_layout"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#fd9728"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:padding="8dp">
+            android:layout_height="wrap_content">
 
-            <!-- Logos -->
-            <ImageView
-                android:layout_width="38dp"
-                android:layout_height="50dp"
-                android:src="@drawable/chocopop" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="Choco "
-                android:textColor="@color/black"
-                android:textSize="28sp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="27dp"
-                android:src="@drawable/paleta" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="Pop"
-                android:textColor="@color/black"
-                android:textSize="28sp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:layout_width="38dp"
-                android:layout_height="50dp"
-                android:src="@drawable/chocopop" />
-        </LinearLayout>
-
-        <!-- Search Bar -->
-        <LinearLayout
-            android:id="@+id/login_search_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_below="@id/login_header_layout"
-            android:layout_marginTop="8dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/lupa" />
-
-            <EditText
-                android:id="@+id/login_search_input"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/search_background"
-                android:hint="Buscar"
-                android:padding="10dp"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#fdf2e6" />
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/carrito"
-                android:layout_marginStart="8dp" />
-
-            <Button
-                android:id="@+id/login_loginButton"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/usuario"
-                android:backgroundTint="#000000"
-                app:iconTint="#000000"
-                app:strokeColor="#000000" />
-        </LinearLayout>
-
-        <!-- Formulario de Inicio de Sesión -->
-        <LinearLayout
-            android:id="@+id/login_form"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp"
-            android:layout_below="@id/login_search_layout"
-            android:layout_marginTop="16dp"
-            android:background="#fd9728"
-            android:elevation="4dp"
-            android:gravity="center">
-
-            <TextView
-                android:id="@+id/login_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="INICIO DE SESIÓN"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:gravity="center" />
-
-            <EditText
-                android:id="@+id/login_usuario"
+            <LinearLayout
+                android:id="@+id/login_header_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/input_background"
-                android:hint="Nombre de usuario o correo:"
-                android:inputType="text"
-                android:padding="18dp"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/login_contraseña"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/input_background"
-                android:hint="Contraseña:"
-                android:inputType="textPassword"
-                android:padding="18dp"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <!-- Checkbox para recordar usuario -->
-            <CheckBox
-                android:id="@+id/login_recordar_usuario"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Recordar usuario"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black" />
-
-            <Button
-                android:id="@+id/login_iniciar_sesion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:backgroundTint="#734A0E"
-                android:padding="18dp"
-                android:text="Iniciar sesión"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-
-            <!-- Texto para registro -->
-
-            <TextView
-                android:id="@+id/login_register_prompt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:background="#fd9728"
                 android:gravity="center"
-                android:text="¿No tienes una cuenta? Regístrate aquí"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:focusable="true"
-                android:padding="8dp"
-                 android:background="?attr/selectableItemBackground" /> <!-- Esto da efecto de clic -->/>
+                android:orientation="horizontal"
+                android:padding="8dp">
 
-            <TextView
-                android:id="@+id/login_forgot_password"
-                android:layout_width="wrap_content"
+                <!-- Logos -->
+                <ImageView
+                    android:layout_width="38dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/chocopop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Choco "
+                    android:textColor="@color/black"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="27dp"
+                    android:src="@drawable/paleta" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Pop"
+                    android:textColor="@color/black"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="38dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/chocopop" />
+            </LinearLayout>
+
+            <!-- Search Bar -->
+            <LinearLayout
+                android:id="@+id/login_search_layout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="¿Olvidaste tu contraseña?"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:gravity="center" />
-        </LinearLayout>
-    </RelativeLayout>
-</ScrollView>
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_below="@id/login_header_layout"
+                android:layout_marginTop="8dp">
+
+
+
+                <ImageView
+                    android:id="@+id/login_search_input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/search_background"
+
+                    android:padding="10dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#fdf2e6" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    android:layout_marginStart="8dp" />
+
+                <Button
+                    android:id="@+id/login_loginButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/usuario"
+                    android:backgroundTint="#000000"
+                    app:iconTint="#000000"
+                    app:strokeColor="#000000" />
+            </LinearLayout>
+
+            <!-- Formulario de Inicio de Sesión -->
+            <LinearLayout
+                android:id="@+id/login_form"
+                android:layout_width="match_parent"
+                android:layout_height="438dp"
+                android:layout_below="@id/login_search_layout"
+                android:layout_marginTop="35dp"
+                android:background="#fd9728"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/login_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="INICIO DE SESIÓN"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/login_usuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/input_background"
+                    android:hint="Nombre de usuario o correo:"
+                    android:inputType="text"
+                    android:padding="18dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/login_contraseña"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/input_background"
+                    android:hint="Contraseña:"
+                    android:inputType="textPassword"
+                    android:padding="18dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+
+                <Button
+                    android:id="@+id/login_iniciar_sesion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#734A0E"
+                    android:padding="18dp"
+                    android:text="Iniciar sesión"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <!-- Texto para registro -->
+
+                <TextView
+                    android:id="@+id/login_register_prompt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="¿No tienes una cuenta? Regístrate aquí"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" /> <!-- Esto da efecto de clic -->
+                />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>

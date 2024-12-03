@@ -1,16 +1,19 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
+    id("kotlin-parcelize")
+
 }
 
 android {
     namespace = "com.example.chocopop"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.chocopop"
         minSdk = 23
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -33,7 +36,18 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    // Habilitar DataBinding
+    dataBinding {
+        enable = true
+    }
+    // Habilitar DataBinding
+    viewBinding {
+        enable = true
+    }
+
 }
+
 
 dependencies {
 
@@ -45,9 +59,23 @@ dependencies {
     // Dependencias para Retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.okhttp3:okhttp:4.9.1")
     implementation ("com.squareup.okhttp3:logging-interceptor:4.9.3")
+    implementation ("org.mongodb:mongodb-driver-sync:4.4.1")
+    implementation("androidx.activity:activity:1.8.0")
 
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
+    // Glide para cargar imágenes
+    implementation("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
+
+    // DataBinding
+    implementation ("androidx.databinding:databinding-runtime:7.0.4")
+
+    // RecyclerView
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
+
+
 
 }
